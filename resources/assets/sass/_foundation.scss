@@ -1,0 +1,220 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: #ECEFF1;
+  color: #253B56;
+  font-family: 'Avenir', sans-serif;
+}
+
+main {
+  max-width: 96rem;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  margin-top: 10.6rem;
+  margin-bottom: 4rem;
+  position: relative;
+
+  h1 {
+    position: absolute;
+    bottom: calc(100% + 1rem);
+    left: 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #breadcrumbs {
+    position: absolute;
+    bottom: calc(100% + 6.6rem);
+    left: 0;
+    font-size: 1.4rem;
+
+    li {
+      display: inline-block;
+
+      &:not(:last-of-type)::after {
+        content: '>';
+        padding-left: .75rem;
+        padding-right: .5rem;
+        color: #a9b1bb;
+      }
+    }
+  }
+}
+
+a {
+  color: #1994D7;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin-bottom: 1.6rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+strong {
+  font-weight: 500;
+}
+
+dt::after {
+  content: ':';
+}
+
+.quizzes, .questions {
+  padding: 2rem 0;
+
+  & > li {
+    border-bottom: 1px solid #dce1e8;
+    padding: 1rem 2rem;
+
+    &:first-of-type {
+      border-top: 1px solid #dce1e8;
+    }
+  }
+
+  dt {
+    font-weight: 500;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+  }
+
+  dd {
+    padding-left: 2rem;
+    font-size: 1.4rem;
+    color: #a9b1bb;
+
+    span {
+      font-size: 1.2rem;
+      display: block;
+    }
+  }
+}
+
+.quizzes > li {
+  dt, dd {
+    margin-top: 0;
+    display: inline-block;
+  }
+}
+
+.questions > li {
+  list-style-type: decimal;
+  list-style-position: inside;
+
+  p {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}
+
+.answers {
+  padding: 1rem 2rem;
+  list-style-type: lower-alpha;
+  list-style-position: inside;
+
+  &.test {
+    list-style-type: none;
+  }
+}
+
+.resources {
+  padding: 1rem 0;
+
+  & > li {
+    padding: 1rem 2rem;
+  }
+
+  span {
+    font-size: 1.4rem;
+    display: block;
+    color: #a9b1bb;
+  }
+}
+
+button {
+  padding: .4rem 2rem;
+  border-radius: 2rem;
+  position: relative;
+  color: #FFFFFF;
+  background-color: #61941b;
+  cursor: pointer;
+  font-size: 1.4rem;
+  transition: background .17s linear;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+
+  &:hover {
+    background-color: #8dc63f;
+  }
+
+  &:active {
+    background-color: #61941b;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: .1rem;
+    left: .5rem;
+    right: .5rem;
+    bottom: 40%;
+    border-radius: 5rem;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIwLjU2Ii8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  }
+}
+
+form {
+
+  &.form-highlight {
+    background-color: #EBF6FC;
+    margin: -2rem -2rem 2rem -2rem;
+    padding: 2rem 2rem 0rem 2rem;
+    border-bottom: 1px solid #dce1e8;
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  label {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  input, textarea, select {
+    display: block;
+    min-width: 40%;
+    box-shadow: 0 1px 3px 0 #777;
+    padding: .4rem 1rem;
+    border-radius: .5rem;
+    font-size: 1.4rem;
+    color: #253B56;
+    resize: vertical;
+  }
+
+  input[type='checkbox'], input[type='radio'] {
+    display: inline-block;
+    margin-right: .5rem;
+  }
+}

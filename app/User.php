@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'first_name', 'last_name', 'perner', 'password',
     ];
 
     /**
@@ -26,4 +26,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function quizzes () {
+      return $this->belongsToMany('App\Quiz')
+        ->withPivot('status', 'points');
+    }
+
+    public function questions () {
+      return $this->belongsToMany('App\Quiz')
+        ->withPivot('answer_id');
+    }
 }
